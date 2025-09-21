@@ -1,0 +1,4 @@
+#!/bin/bash
+env
+compgen -v
+compgen -A
