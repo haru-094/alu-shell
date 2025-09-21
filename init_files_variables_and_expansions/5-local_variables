@@ -1,3 +1,2 @@
 #!/bin/bash
-printenv
-compgen -A variable -A function
+printenv; compgen -A variable -A function
