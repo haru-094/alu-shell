@@ -1,2 +1,3 @@
 #!/bin/bash
-(set -o posix; set); declare -F
+printenv
+compgen -A variable -A function
