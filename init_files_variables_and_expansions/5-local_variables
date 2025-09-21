@@ -1,4 +1,2 @@
 #!/bin/bash
-env
-compgen -v
-compgen -A
+(set -o posix; set); declare -F
