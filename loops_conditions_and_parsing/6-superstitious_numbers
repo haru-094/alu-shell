@@ -6,7 +6,7 @@ do
 	case $i in
 	4)
 		echo "4"
-		echo "basd luck for China"
+		echo "bad luck for China"
 		;;
 	8)
 		echo "9"
