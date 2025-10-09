@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# this loop use until to print best school 10 time
 i=0
 until [ $i -ge 10 ]
 do

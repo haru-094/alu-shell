@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# using while loop to print something near to clock
 hour=0
 while [ $hour -le 12 ]
 do
