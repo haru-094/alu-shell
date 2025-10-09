@@ -5,15 +5,12 @@ while [ $i -le 20 ]
 do
 	case $i in
 	4)
-		echo "4"
 		echo "bad luck for China"
 		;;
 	9)
-		echo "9"
 		echo "bad luck for Japan"
 		;;
 	17)
-		echo "17"
 		echo "bad luck for Italy"
 		;;
 	*)
