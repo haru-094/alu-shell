@@ -1,4 +1,5 @@
 #!/bin/bash
+# get the pid
 for p_dir in /proc/[0-9]*; 
 do
 	if [ -r "$p_dir/cmdline" ]; then

@@ -1,2 +1,4 @@
-#!/bin/bash
+#!/usr/env bash
+# print all currently running process
+# shellcheck disable=SC2009
 ps axuf | grep [b]ash
