@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env bash
 # kill 7-highlander
 for pid in /proc/[0-9]*; do
 	cmdline=$(tr "\0" " " < "$pid/cmdline" 2>/dev/null)
