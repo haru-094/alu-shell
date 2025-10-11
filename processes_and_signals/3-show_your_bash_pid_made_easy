@@ -2,11 +2,7 @@
 # get the pid
 for p_dir in /proc/[0-9]*; 
 do
-	if [ -r "$p_dir/exe" ]; then
-		execu=$(readlink -f "$p_dir/exe" 2>/dev/null)
-		if [[ -n "$execu" && "execu" == *bash* ]]; then
-		pid=$(basename "$p_dir")
-		echo "$pid $execu"
-		fi
+	if grep -q bash "$p_dir/comm" 2>/dev/null; then
+		echo "$(basename "$p_dir") $(cat "$p_dir/comm")"
 	fi
 done
