@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# this will list all file in current directory throught loop
+for i in *
+do
+	echo "${i#*-}"
+done
