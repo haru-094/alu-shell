@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # get the pid
 for p_dir in /proc/[0-9]*; 
 do
