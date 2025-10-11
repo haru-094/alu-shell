@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# do multiple task
+pid_dir="var/run/myscript.pid"
+echo $$ > "$pid_dir"
+
+cleanup() {
+	rm -f "$pid_dir"
+	exit 0
+}
+trap "echo "Y U no love me?!"" SIGINT
+trap "echo "I hatte the kill command"" SIGTERM
+trap "cleanup" SIGQUIT SIGTERM
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done

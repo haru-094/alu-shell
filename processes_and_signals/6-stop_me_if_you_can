@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# stop the infinte while loop
+for pid in /proc/[0-9]*; do
+	cmdline=$(tr "\0" " " < "$pid/cmdline" 2>/dev/null)
+	if [[ "$cmdline" == *4-to_infinity_and_beyond* ]]; then
+		builtin kill -INT "$(basename "$pid")"
+	fi
+done

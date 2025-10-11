@@ -1,0 +1,8 @@
+#!/usr/bin/env
+# kill 7-highlander
+for pid in /proc/[0-9]*; do
+	cmdline=$(tr "\0" " " < "$pid/cmdline" 2>/dev/null)
+	if [[ "$cmdline" == *7-highlander* ]]; then
+		kill -9 "$(basename "$pid")"
+	fi
+done
