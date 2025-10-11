@@ -3,7 +3,7 @@
 for p_dir in /proc/[0-9]*; 
 do
 	if [ -r "$p_dir/cmdline" ]; then
-		cmdline=$(tr -d '\0' < '$p_dir/cmdline' | sed 's/$/ /')
+		cmdline=$(tr -d "\0" < "$p_dir/cmdline" | sed "s/$/ /")
 		if [[ "$cmdline" == *bash* ]]; then
 		pid=$(basename "$p_dir")
 		echo "$pid $cmdline"
